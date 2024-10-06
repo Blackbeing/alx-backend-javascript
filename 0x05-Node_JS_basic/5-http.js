@@ -34,9 +34,11 @@ const app = http.createServer(async (req, res) => {
           }
           fields[field].push(firstname);
         });
+        const output = [];
         for (const [field, names] of Object.entries(fields)) {
-          res.write(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}\n`);
+          output.push(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
         }
+        res.write(output.join('\n'));
         res.end();
       }
     });
