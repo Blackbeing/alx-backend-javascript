@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "mocha": "^10.8.2",
+    "eslint-plugin-jest": "^22.17.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint --fix *.js",
+    "check-lint": "eslint *.js"
+  }
+}
